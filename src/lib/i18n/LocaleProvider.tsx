@@ -5,7 +5,7 @@ import {
   useContext,
   useEffect,
   useMemo,
-  useState,
+  useSyncExternalStore,
 } from "react";
 import { dictionaries, type Dictionary, type Locale } from "./dictionaries";
 
@@ -17,10 +17,7 @@ type LocaleContextValue = {
 const LocaleContext = createContext<LocaleContextValue | null>(null);
 
 function detectLocale(): Locale {
-  const candidates = [
-    ...(typeof navigator !== "undefined" ? navigator.languages ?? [] : []),
-    typeof navigator !== "undefined" ? navigator.language : "",
-  ];
+  const candidates = [...(navigator.languages ?? []), navigator.language];
 
   for (const tag of candidates) {
     const lower = tag.toLowerCase();
@@ -31,14 +28,29 @@ function detectLocale(): Locale {
   return "es";
 }
 
+function subscribeToLanguageChange(callback: () => void) {
+  window.addEventListener("languagechange", callback);
+  return () => window.removeEventListener("languagechange", callback);
+}
+
+function getServerSnapshot(): Locale {
+  return "es";
+}
+
+function getClientSnapshot(): Locale {
+  return detectLocale();
+}
+
 export function LocaleProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocale] = useState<Locale>("es");
+  const locale = useSyncExternalStore(
+    subscribeToLanguageChange,
+    getClientSnapshot,
+    getServerSnapshot,
+  );
 
   useEffect(() => {
-    const next = detectLocale();
-    setLocale(next);
-    document.documentElement.lang = next === "es" ? "es-CR" : "en";
-  }, []);
+    document.documentElement.lang = locale === "es" ? "es-CR" : "en";
+  }, [locale]);
 
   const value = useMemo(
     () => ({

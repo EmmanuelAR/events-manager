@@ -11,6 +11,9 @@ export type LocalizedEventContent = {
   subtitle?: string;
   coverAlt?: string;
   summary?: string;
+  whoCanAttend?: string;
+  whatToBring?: string[];
+  privacy?: string;
   agenda?: AgendaItem[];
   materials?: Array<Pick<MaterialItem, "label"> & Partial<MaterialItem>>;
   faq?: FaqItem[];
@@ -38,6 +41,9 @@ export function localizeEvent(
     subtitle: en.subtitle ?? base.subtitle,
     coverAlt: en.coverAlt ?? base.coverAlt,
     summary: en.summary ?? base.summary,
+    whoCanAttend: en.whoCanAttend ?? base.whoCanAttend,
+    whatToBring: en.whatToBring ?? base.whatToBring,
+    privacy: en.privacy ?? base.privacy,
     agenda: en.agenda ?? base.agenda,
     materials: en.materials
       ? base.materials.map((material, index) => ({

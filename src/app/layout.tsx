@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { LocaleProvider } from "@/lib/i18n/LocaleProvider";
 import "./globals.css";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://events-manager-ten.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://eventos-costa-rica.vercel.app";
 
 const OG_IMAGE_PATH = "/assets/imagenes/og-community.jpg";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Eventos SpaceXSI Community Costa Rica",
-    template: "%s | SpaceXSI Community Costa Rica",
+    default: "Eventos Grok Bot & Cursor Costa Rica",
+    template: "%s | Eventos Grok Bot & Cursor Costa Rica",
   },
   description:
     "Eventos de Grok Bot y Cursor en Costa Rica. Part of the SpaceXSI Community.",
@@ -20,25 +21,25 @@ export const metadata: Metadata = {
     icon: "/assets/logos/grokbot-favicon-thumbnailtool.svg",
   },
   openGraph: {
-    title: "Eventos SpaceXSI Community Costa Rica",
+    title: "Eventos Grok Bot & Cursor Costa Rica",
     description:
       "Eventos de Grok Bot y Cursor en Costa Rica. Part of the SpaceXSI Community.",
     type: "website",
     locale: "es_CR",
     url: SITE_URL,
-    siteName: "SpaceXSI Community Costa Rica",
+    siteName: "Eventos Grok Bot & Cursor Costa Rica",
     images: [
       {
         url: OG_IMAGE_PATH,
         width: 640,
         height: 640,
-        alt: "Logo de la comunidad SpaceXSI Costa Rica",
+        alt: "Imagen de la SpaceXSI Community",
       },
     ],
   },
   twitter: {
     card: "summary",
-    title: "Eventos SpaceXSI Community Costa Rica",
+    title: "Eventos Grok Bot & Cursor Costa Rica",
     description:
       "Eventos de Grok Bot y Cursor en Costa Rica. Part of the SpaceXSI Community.",
     images: [OG_IMAGE_PATH],
@@ -59,6 +60,7 @@ export default function RootLayout({
         <LocaleProvider>
           <Header />
           <main className="site-main">{children}</main>
+          <Footer />
         </LocaleProvider>
       </body>
     </html>

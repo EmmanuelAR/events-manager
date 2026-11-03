@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { unlockCredits, checkRateLimit, recordAttempt } from "@/lib/events/credits";
+import { unlockCredits, checkRateLimitAsync, recordAttempt } from "@/lib/events/credits";
 import { getEventBySlug } from "@/lib/events/load";
 
 const CACHE_HEADERS = {
@@ -20,14 +20,17 @@ function jsonResponse(
 }
 
 function getClientIp(request: Request): string {
-  const forwarded = request.headers.get("x-forwarded-for");
-  if (forwarded) {
-    return forwarded.split(",")[0].trim();
-  }
-  const realIp = request.headers.get("x-real-ip");
-  if (realIp) {
-    return realIp.trim();
-  }
+  const headers = request.headers;
+
+  const realIp = headers.get("x-real-ip");
+  if (realIp) return realIp.trim();
+
+  const vercelForwarded = headers.get("x-vercel-forwarded-for");
+  if (vercelForwarded) return vercelForwarded.split(",")[0].trim();
+
+  const forwarded = headers.get("x-forwarded-for");
+  if (forwarded) return forwarded.split(",")[0].trim();
+
   return "unknown";
 }
 
@@ -70,7 +73,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const rateCheck = checkRateLimit(ip, slug);
+  const rateCheck = await checkRateLimitAsync(ip, slug);
   if (!rateCheck.allowed) {
     return jsonResponse(
       { ok: false, error: "Demasiados intentos. Esperá un rato." },

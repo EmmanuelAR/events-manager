@@ -5,13 +5,18 @@ import { getAllEvents, getEventBySlug } from "@/lib/events/load";
 import type { CommunityEventRecord } from "@/lib/i18n/localizeEvent";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://events-manager-ten.vercel.app";
-
-const OG_IMAGE_PATH = "/assets/imagenes/og-community.jpg";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://eventos-costa-rica.vercel.app";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
+
+function truncateDescription(text: string, maxLength = 160): string {
+  if (text.length <= maxLength) return text;
+  const truncated = text.slice(0, maxLength - 1);
+  const lastSpace = truncated.lastIndexOf(" ");
+  return (lastSpace > 0 ? truncated.slice(0, lastSpace) : truncated) + "…";
+}
 
 export async function generateStaticParams() {
   const events = await getAllEvents();
@@ -27,30 +32,32 @@ export async function generateMetadata({
     return { title: "Evento" };
   }
   const eventUrl = `${SITE_URL}/eventos/${slug}`;
+  const shortDescription = truncateDescription(event.summary);
+
   return {
     title: event.title,
-    description: event.summary,
+    description: shortDescription,
     openGraph: {
       title: event.title,
-      description: event.summary,
+      description: shortDescription,
       type: "website",
       locale: "es_CR",
       url: eventUrl,
-      siteName: "SpaceXSI Community Costa Rica",
+      siteName: "Eventos Grok Bot & Cursor Costa Rica",
       images: [
         {
-          url: OG_IMAGE_PATH,
+          url: event.cover,
           width: 640,
           height: 640,
-          alt: "Logo de la comunidad SpaceXSI Costa Rica",
+          alt: event.coverAlt,
         },
       ],
     },
     twitter: {
       card: "summary",
       title: event.title,
-      description: event.summary,
-      images: [OG_IMAGE_PATH],
+      description: shortDescription,
+      images: [event.cover],
     },
     alternates: {
       canonical: eventUrl,

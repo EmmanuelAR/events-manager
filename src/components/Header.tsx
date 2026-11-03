@@ -16,7 +16,7 @@ export function Header() {
             priority
           />
           <span className={styles.brandText}>
-            <strong>SpaceXSI Community</strong>
+            <strong>Eventos Grok Bot &amp; Cursor</strong>
             <span>Costa Rica</span>
           </span>
         </Link>
