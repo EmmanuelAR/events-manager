@@ -3,8 +3,8 @@
   "title": "IA para tu carrera: conseguí trabajo y adaptate al mundo laboral con Grok Bot",
   "subtitle": "Grok Bot San José 101. Taller presencial y gratuito",
   "status": "upcoming",
-  "startsAt": "2026-11-28T13:00:00-06:00",
-  "endsAt": "2026-11-28T17:00:00-06:00",
+  "startsAt": "2026-12-05T13:00:00-06:00",
+  "endsAt": "2026-12-05T17:00:00-06:00",
   "timezone": "America/Costa_Rica",
   "venue": {
     "name": "Centro Cultural Costarricense Norteamericano",
@@ -12,9 +12,9 @@
     "mapsUrl": "https://maps.google.com/?q=Centro+Cultural+Costarricense+Norteamericano+Dent"
   },
   "cover": "/assets/imagenes/events/grok-bot-101-luma.jpg",
-  "coverAlt": "Portada del taller Grok Bot San José 101, sábado 28 de noviembre",
-  "lumaUrl": "https://lu.ma/evt-KNGNhj75yzdxxxr",
-  "lumaEventId": "evt-KNGNhj75yzdxxxr",
+  "coverAlt": "Portada del taller Grok Bot San José 101, sábado 5 de diciembre",
+  "lumaUrl": "https://luma.com/emnhgsf3",
+  "lumaEventId": "emnhgsf3",
   "whatsappUrl": "https://chat.whatsapp.com/HPy6hmmU0cU8hhdc7emMGH",
   "communityWhatsappUrl": "https://chat.whatsapp.com/EjedY8Yysb8Bhuevn1zsKV",
   "summary": "Taller presencial y gratuito para aprender a usar Grok Bot desde cero, como un compañero de trabajo más. No ocupás saber programar ni tener experiencia con IA. Vas a armar tu currículum y tu portafolio con IA, y ver cómo usar Grok Bot para buscar trabajo y adaptarte al mundo laboral de hoy. Evento sin fines de lucro. Registro desde las 12:00 m. d.; el taller arranca a la 1:00 p. m. Cupo limitado y registro con aprobación en Luma.",
@@ -61,7 +61,7 @@
   "materials": [
     {
       "label": "Registro en Luma",
-      "url": "https://lu.ma/evt-KNGNhj75yzdxxxr",
+      "url": "https://luma.com/emnhgsf3",
       "kind": "link"
     },
     {
@@ -101,7 +101,7 @@
   "en": {
     "title": "AI for your career: land a job and adapt to today's workplace with Grok Bot",
     "subtitle": "Grok Bot San José 101. Free in-person workshop",
-    "coverAlt": "Cover for the Grok Bot San José 101 workshop, Saturday November 28",
+    "coverAlt": "Cover for the Grok Bot San José 101 workshop, Saturday December 5",
     "summary": "A free in-person workshop to learn Grok Bot from scratch, like a teammate at work. No coding or prior AI experience needed. You'll build your resume and portfolio with AI, and see how Grok Bot helps with job search and today's workplace. Non-profit event. Check-in from 12:00 PM; workshop starts at 1:00 PM. Limited seats; Luma registration requires approval.",
     "whoCanAttend": "The event is open to the public and students. It's helpful if you're job hunting, starting your career, or want to see AI in a real use case. Limited seats; registration requires approval. If you can't make it, cancel your registration so someone else can take the spot.",
     "whatToBring": [
