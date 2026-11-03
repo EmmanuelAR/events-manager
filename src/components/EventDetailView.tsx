@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { CreditsClaim } from "@/components/CreditsClaim";
+import { LumaCheckoutButton } from "@/components/LumaCheckoutButton";
 import { formatEventDate, formatEventTimeRange } from "@/lib/events/format";
 import { localizeEvent, type CommunityEventRecord } from "@/lib/i18n/localizeEvent";
 import { useLocale } from "@/lib/i18n/LocaleProvider";
@@ -73,13 +74,20 @@ export function EventDetailView({ event }: Props) {
             <div className={styles.moduleBody}>
               <p className={styles.registerCopy}>{t.registrationCopy}</p>
               <div className={styles.actions}>
-                <Button
-                  href={localized.lumaUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {t.requestJoin}
-                </Button>
+                {localized.lumaEventId ? (
+                  <LumaCheckoutButton
+                    eventId={localized.lumaEventId}
+                    eventUrl={localized.lumaUrl}
+                  />
+                ) : (
+                  <Button
+                    href={localized.lumaUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {t.requestJoin}
+                  </Button>
+                )}
               </div>
             </div>
           </section>

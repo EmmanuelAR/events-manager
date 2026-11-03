@@ -35,6 +35,8 @@ export type CommunityEvent = {
   cover: string;
   coverAlt: string;
   lumaUrl?: string;
+  /** ID Luma (evt-...) para el botón embed de registro */
+  lumaEventId?: string;
   /** Grupo de WhatsApp solo de este evento */
   whatsappUrl?: string;
   /** Grupo de WhatsApp de la comunidad en general */

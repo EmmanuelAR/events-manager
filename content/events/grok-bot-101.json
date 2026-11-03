@@ -13,7 +13,8 @@
   },
   "cover": "/assets/imagenes/events/grok-bot-101-luma.jpg",
   "coverAlt": "Portada del taller Grok Bot San José 101, sábado 28 de noviembre",
-  "lumaUrl": "https://luma.com/emnhgsf3",
+  "lumaUrl": "https://luma.com/event/evt-KNGNhj75yzdxxxr",
+  "lumaEventId": "evt-KNGNhj75yzdxxxr",
   "whatsappUrl": "https://chat.whatsapp.com/HPy6hmmU0cU8hhdc7emMGH",
   "communityWhatsappUrl": "https://chat.whatsapp.com/EjedY8Yysb8Bhuevn1zsKV",
   "summary": "Taller presencial y gratuito para aprender a usar Grok Bot desde cero, como un compañero de trabajo más. No ocupás saber programar ni tener experiencia con IA. Vas a armar tu currículum y tu portafolio con IA, y ver cómo usar Grok Bot para buscar trabajo y adaptarte al mundo laboral de hoy. Evento sin fines de lucro. Registro desde las 12:00 m. d.; el taller arranca a la 1:00 p. m. Cupo limitado y registro con aprobación en Luma.",
@@ -52,7 +53,7 @@
   "materials": [
     {
       "label": "Registro en Luma",
-      "url": "https://luma.com/emnhgsf3",
+      "url": "https://luma.com/event/evt-KNGNhj75yzdxxxr",
       "kind": "link"
     },
     {
