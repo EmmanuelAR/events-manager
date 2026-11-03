@@ -3,28 +3,24 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  min-height: 2.85rem;
-  padding: 0.75rem 1.35rem;
+  min-height: 2.9rem;
+  padding: 0.78rem 1.4rem;
   border: 1px solid transparent;
   border-radius: var(--radius-pill);
   font-weight: 500;
   font-size: 0.95rem;
+  letter-spacing: -0.01em;
   cursor: pointer;
   transition:
-    opacity 160ms ease,
-    background 160ms ease,
-    border-color 160ms ease,
-    transform 160ms ease;
-}
-
-.button:hover {
-  transform: translateY(-1px);
+    opacity 180ms var(--ease),
+    background 180ms var(--ease),
+    border-color 180ms var(--ease),
+    color 180ms var(--ease);
 }
 
 .button:disabled {
   opacity: 0.4;
   cursor: not-allowed;
-  transform: none;
 }
 
 .primary {
@@ -33,14 +29,13 @@
 }
 
 .primary:hover {
-  opacity: 0.92;
+  opacity: 0.9;
 }
 
 .secondary {
   background: rgba(255, 255, 255, 0.06);
   color: var(--text);
   border-color: var(--border-strong);
-  backdrop-filter: blur(10px);
 }
 
 .secondary:hover {

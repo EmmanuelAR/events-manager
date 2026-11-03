@@ -1,31 +1,31 @@
 .section {
   width: 100%;
-  padding: 1.15rem 1.2rem;
-  border-radius: 1rem;
-  background: #151515;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.3rem 1.3rem;
+  border-radius: var(--radius-xl);
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.85rem;
 }
 
 .heading {
   font-weight: 500;
-  font-size: 1.05rem;
-  letter-spacing: -0.02em;
+  font-size: 1.1rem;
+  letter-spacing: -0.03em;
 }
 
 .lead {
   color: var(--text-dim);
-  font-size: 0.92rem;
-  line-height: 1.5;
+  font-size: 0.94rem;
+  line-height: 1.55;
 }
 
 .form,
 .choices,
 .qrBlock {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.8rem;
   align-content: start;
 }
 
@@ -36,10 +36,10 @@
 
 .input {
   width: 100%;
-  min-height: 2.6rem;
-  padding: 0.65rem 0.85rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 0.75rem;
+  min-height: 2.75rem;
+  padding: 0.7rem 0.95rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
   background: #0a0a0a;
   color: var(--text);
 }
@@ -70,7 +70,7 @@
   height: auto;
   background: var(--surface-soft);
   padding: 0.65rem;
-  border-radius: 0.85rem;
+  border-radius: var(--radius-sm);
 }
 
 @media (max-width: 719px) {

@@ -1,14 +1,21 @@
 import type { Locale } from "@/lib/i18n/dictionaries";
 import type { CommunityEvent } from "./types";
 
+/** Normalize ICU narrow/nbsp spaces so SSR and browser match. */
+function normalizeIntlText(value: string): string {
+  return value.replace(/[\u00a0\u202f\u2009\u2007]/g, " ");
+}
+
 export function formatEventDate(iso: string, locale: Locale = "es"): string {
-  const value = new Intl.DateTimeFormat(locale === "es" ? "es-CR" : "en-US", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: "America/Costa_Rica",
-  }).format(new Date(iso));
+  const value = normalizeIntlText(
+    new Intl.DateTimeFormat(locale === "es" ? "es-CR" : "en-US", {
+      weekday: "long",
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      timeZone: "America/Costa_Rica",
+    }).format(new Date(iso)),
+  );
 
   return value.charAt(0).toUpperCase() + value.slice(1);
 }
@@ -28,18 +35,20 @@ export function formatEventTimeRange(
     },
   );
 
-  const start = timeFormatter.format(new Date(startsAt));
-  const end = timeFormatter.format(new Date(endsAt));
+  const start = normalizeIntlText(timeFormatter.format(new Date(startsAt)));
+  const end = normalizeIntlText(timeFormatter.format(new Date(endsAt)));
   return locale === "es" ? `${start} a ${end}` : `${start} to ${end}`;
 }
 
 export function formatDateLabel(iso: string, locale: Locale = "es"): string {
-  const value = new Intl.DateTimeFormat(locale === "es" ? "es-CR" : "en-US", {
-    day: "numeric",
-    month: "short",
-    weekday: "long",
-    timeZone: "America/Costa_Rica",
-  }).format(new Date(iso));
+  const value = normalizeIntlText(
+    new Intl.DateTimeFormat(locale === "es" ? "es-CR" : "en-US", {
+      day: "numeric",
+      month: "short",
+      weekday: "long",
+      timeZone: "America/Costa_Rica",
+    }).format(new Date(iso)),
+  );
 
   if (locale === "en") {
     return value;
