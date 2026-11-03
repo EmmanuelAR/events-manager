@@ -28,21 +28,17 @@
   letter-spacing: -0.05em;
 }
 
+.title span {
+  color: var(--text-faint);
+}
+
 .region {
-  display: block;
-  color: var(--text-dim);
+  color: var(--text-dim) !important;
   font-size: 0.34em;
   letter-spacing: 0.08em;
   font-weight: 500;
   margin-top: 0.45em;
   text-transform: uppercase;
-}
-
-.subtitle {
-  color: var(--text-dim);
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
-  margin-top: -0.25rem;
 }
 
 .headline {
