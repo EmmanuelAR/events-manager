@@ -11,7 +11,7 @@ export const dictionaries = {
     heroHeadline: "Eventos en Costa Rica",
     heroLead: "Agenda, materiales y créditos de cada meetup.",
     heroCredit:
-      "Organizado por Build ambassadors in the SpaceXSI Community.",
+      "Organizado por Build Ambassadors in the SpaceXSI Community.",
     upcomingEvent: "Próximo evento",
     pastEvent: "Evento pasado",
     date: "Fecha",
@@ -89,7 +89,7 @@ export const dictionaries = {
     ambassadors: "Embajadores",
     ambassadorsEyebrow: "SpaceXSI Community Costa Rica",
     ambassadorsLead:
-      "Build ambassadors que organizan los eventos de la comunidad en Costa Rica.",
+      "Build Ambassadors que organizan los eventos de la comunidad en Costa Rica.",
     filterAria: "Filtro",
     navAria: "Principal",
     langAria: "Idioma",
@@ -104,7 +104,7 @@ export const dictionaries = {
     heroHeadline: "Events in Costa Rica",
     heroLead: "Agenda, materials, and credits for every meetup.",
     heroCredit:
-      "Organized by Build ambassadors in the SpaceXSI Community.",
+      "Organized by Build Ambassadors in the SpaceXSI Community.",
     upcomingEvent: "Upcoming event",
     pastEvent: "Past event",
     date: "Date",
@@ -182,7 +182,7 @@ export const dictionaries = {
     ambassadors: "Ambassadors",
     ambassadorsEyebrow: "SpaceXSI Community Costa Rica",
     ambassadorsLead:
-      "Build ambassadors who organize community events in Costa Rica.",
+      "Build Ambassadors who organize community events in Costa Rica.",
     filterAria: "Filter",
     navAria: "Main",
     langAria: "Language",
