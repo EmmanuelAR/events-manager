@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Button } from "@/components/Button";
 import { CreditsClaim } from "@/components/CreditsClaim";
 import { LumaCheckoutButton } from "@/components/LumaCheckoutButton";
-import { formatEventDate, formatEventTimeRange } from "@/lib/events/format";
+import { formatEventDate, formatEventTimeRange, buildIcs } from "@/lib/events/format";
 import { localizeEvent, type CommunityEventRecord } from "@/lib/i18n/localizeEvent";
 import { useLocale } from "@/lib/i18n/LocaleProvider";
 import styles from "@/app/eventos/[slug]/page.module.css";
@@ -16,6 +16,19 @@ type Props = {
 export function EventDetailView({ event }: Props) {
   const { locale, t } = useLocale();
   const localized = localizeEvent(event, locale);
+
+  function handleDownloadIcs() {
+    const ics = buildIcs(localized);
+    const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `${localized.slug}.ics`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  }
 
   return (
     <article className={styles.page}>
@@ -60,7 +73,7 @@ export function EventDetailView({ event }: Props) {
               <span>
                 {localized.venue.name}
                 <br />
-                <span className="muted">{localized.venue.address}</span>
+                <span className={styles.locationMuted}>{localized.venue.address}</span>
               </span>
             </li>
           </ul>
@@ -68,6 +81,13 @@ export function EventDetailView({ event }: Props) {
       </div>
 
       <div className={`${styles.shell} ${styles.body}`}>
+        <section className={`${styles.block} ${styles.spanFull}`} id="descripcion">
+          <h2 className={styles.heading}>{t.summary}</h2>
+          <div className={styles.moduleBody}>
+            <p className={styles.summaryText}>{localized.summary}</p>
+          </div>
+        </section>
+
         {localized.lumaUrl ? (
           <section className={`${styles.module} ${styles.spanFull}`}>
             <h2 className={styles.registerTitle}>{t.registration}</h2>
@@ -88,7 +108,36 @@ export function EventDetailView({ event }: Props) {
                     {t.requestJoin}
                   </Button>
                 )}
+                <Button
+                  type="button"
+                  variant="secondary"
+                  onClick={handleDownloadIcs}
+                >
+                  {t.addToCalendar}
+                </Button>
               </div>
+            </div>
+          </section>
+        ) : null}
+
+        {localized.whoCanAttend ? (
+          <section className={styles.block} id="quien-puede-asistir">
+            <h2 className={styles.heading}>{t.whoCanAttend}</h2>
+            <div className={styles.moduleBody}>
+              <p className={styles.sectionText}>{localized.whoCanAttend}</p>
+            </div>
+          </section>
+        ) : null}
+
+        {localized.whatToBring && localized.whatToBring.length > 0 ? (
+          <section className={styles.block} id="que-traer">
+            <h2 className={styles.heading}>{t.whatToBring}</h2>
+            <div className={styles.moduleBody}>
+              <ul className={styles.bringList}>
+                {localized.whatToBring.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
             </div>
           </section>
         ) : null}
@@ -105,7 +154,7 @@ export function EventDetailView({ event }: Props) {
                   <span className={styles.agendaTime}>{item.time}</span>
                   <div>
                     <strong>{item.title}</strong>
-                    {item.note ? <p className="muted">{item.note}</p> : null}
+                    {item.note ? <p className={styles.noteMuted}>{item.note}</p> : null}
                   </div>
                 </li>
               ))}
@@ -124,7 +173,7 @@ export function EventDetailView({ event }: Props) {
             <p>
               <strong>{localized.venue.name}</strong>
             </p>
-            <p className="muted">{localized.venue.address}</p>
+            <p className={styles.locationMuted}>{localized.venue.address}</p>
             {localized.venue.mapsUrl ? (
               <div className={styles.inlineActions}>
                 <Button
@@ -139,6 +188,54 @@ export function EventDetailView({ event }: Props) {
             ) : null}
           </div>
         </section>
+
+        {localized.whatsappUrl || localized.communityWhatsappUrl ? (
+          <section className={styles.block} id="whatsapp">
+            <h2 className={styles.heading}>{t.whatsapp}</h2>
+            <div className={styles.moduleBody}>
+              <p className={styles.sectionLead}>{t.whatsappLead}</p>
+              <div className={styles.whatsappGroups}>
+                {localized.whatsappUrl ? (
+                  <div className={styles.whatsappGroup}>
+                    <strong>{t.whatsappEventLabel}</strong>
+                    <p className={styles.noteMuted}>{t.whatsappEventHint}</p>
+                    <Button
+                      href={localized.whatsappUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      variant="secondary"
+                    >
+                      {t.joinEventGroup}
+                    </Button>
+                  </div>
+                ) : null}
+                {localized.communityWhatsappUrl ? (
+                  <div className={styles.whatsappGroup}>
+                    <strong>{t.whatsappCommunityLabel}</strong>
+                    <p className={styles.noteMuted}>{t.whatsappCommunityHint}</p>
+                    <Button
+                      href={localized.communityWhatsappUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      variant="secondary"
+                    >
+                      {t.joinCommunityGroup}
+                    </Button>
+                  </div>
+                ) : null}
+              </div>
+            </div>
+          </section>
+        ) : null}
+
+        {localized.privacy ? (
+          <section className={styles.block} id="privacidad">
+            <h2 className={styles.heading}>{t.privacyPhotos}</h2>
+            <div className={styles.moduleBody}>
+              <p className={styles.sectionText}>{localized.privacy}</p>
+            </div>
+          </section>
+        ) : null}
 
         <section className={styles.block} id="materiales">
           <h2 className={styles.heading}>{t.materials}</h2>
@@ -162,7 +259,7 @@ export function EventDetailView({ event }: Props) {
                 ))}
               </ul>
             ) : (
-              <p className="muted">{t.noMaterials}</p>
+              <p className={styles.noteMuted}>{t.noMaterials}</p>
             )}
           </div>
         </section>

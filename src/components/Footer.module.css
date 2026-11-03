@@ -1,0 +1,19 @@
+.footer {
+  margin-top: auto;
+  padding-block: 2.5rem 2rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.inner {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.disclaimer {
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  line-height: 1.55;
+  max-width: 40rem;
+}

@@ -72,11 +72,11 @@ export function buildIcs(event: CommunityEvent): string {
   return [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//SpaceXSI Community Costa Rica//Events//ES",
+    "PRODID:-//Grok Bot & Cursor Costa Rica//Events//ES",
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
     "BEGIN:VEVENT",
-    `UID:${event.slug}@spacexsi-cr-events`,
+    `UID:${event.slug}@grokbot-cursor-cr-events`,
     `DTSTAMP:${stamp(new Date().toISOString())}`,
     `DTSTART:${stamp(event.startsAt)}`,
     `DTEND:${stamp(event.endsAt)}`,

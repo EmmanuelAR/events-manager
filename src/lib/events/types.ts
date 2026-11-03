@@ -42,6 +42,12 @@ export type CommunityEvent = {
   /** Grupo de WhatsApp de la comunidad en general */
   communityWhatsappUrl?: string;
   summary: string;
+  /** Quién puede asistir */
+  whoCanAttend?: string;
+  /** Qué necesitas traer */
+  whatToBring?: string[];
+  /** Nota de privacidad */
+  privacy?: string;
   agenda: AgendaItem[];
   materials: MaterialItem[];
   faq?: FaqItem[];

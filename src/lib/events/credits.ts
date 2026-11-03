@@ -1,4 +1,6 @@
 import { timingSafeEqual } from "node:crypto";
+import { Ratelimit } from "@upstash/ratelimit";
+import { Redis } from "@upstash/redis";
 import type { CreditsLinks } from "./types";
 
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
@@ -13,6 +15,54 @@ const rateLimitStore = new Map<string, AttemptRecord>();
 
 function getRateLimitKey(ip: string, slug: string): string {
   return `${ip}:${slug}`;
+}
+
+function getUpstashUrl(): string | undefined {
+  return process.env.UPSTASH_REDIS_REST_URL || process.env.KV_REST_API_URL;
+}
+
+function getUpstashToken(): string | undefined {
+  return process.env.UPSTASH_REDIS_REST_TOKEN || process.env.KV_REST_API_TOKEN;
+}
+
+function createUpstashLimiter(): Ratelimit | null {
+  const url = getUpstashUrl();
+  const token = getUpstashToken();
+
+  if (url && token) {
+    try {
+      const redis = new Redis({ url, token });
+      return new Ratelimit({
+        redis,
+        limiter: Ratelimit.slidingWindow(RATE_LIMIT_MAX_ATTEMPTS, "10 m"),
+        analytics: false,
+        prefix: "credits-rl",
+      });
+    } catch {
+      return null;
+    }
+  }
+  return null;
+}
+
+const upstashLimiter = createUpstashLimiter();
+
+export async function checkRateLimitAsync(
+  ip: string,
+  slug: string,
+): Promise<{ allowed: boolean; retryAfterSeconds: number }> {
+  const key = getRateLimitKey(ip, slug);
+
+  if (upstashLimiter) {
+    const result = await upstashLimiter.limit(key);
+    if (!result.success) {
+      const retryAfterSeconds = Math.ceil((result.reset - Date.now()) / 1000);
+      return { allowed: false, retryAfterSeconds: Math.max(retryAfterSeconds, 1) };
+    }
+    return { allowed: true, retryAfterSeconds: 0 };
+  }
+
+  return checkRateLimit(ip, slug);
 }
 
 export function checkRateLimit(
@@ -45,6 +95,10 @@ export function checkRateLimit(
 }
 
 export function recordAttempt(ip: string, slug: string): void {
+  if (upstashLimiter) {
+    return;
+  }
+
   const key = getRateLimitKey(ip, slug);
   const now = Date.now();
   const existing = rateLimitStore.get(key);
