@@ -1,0 +1,157 @@
+{
+  "slug": "grok-bot-101",
+  "title": "IA para tu carrera: conseguí trabajo y adaptate al mundo laboral con Grok Bot",
+  "subtitle": "Grok Bot San José 101. Taller presencial y gratuito",
+  "status": "upcoming",
+  "startsAt": "2026-11-28T13:00:00-06:00",
+  "endsAt": "2026-11-28T17:00:00-06:00",
+  "timezone": "America/Costa_Rica",
+  "venue": {
+    "name": "Centro Cultural Costarricense Norteamericano",
+    "address": "C. 37, San José, Dent, 11501, Costa Rica",
+    "mapsUrl": "https://maps.google.com/?q=Centro+Cultural+Costarricense+Norteamericano+Dent"
+  },
+  "cover": "/assets/imagenes/events/grok-bot-101-luma.jpg",
+  "coverAlt": "Portada del taller Grok Bot San José 101, sábado 28 de noviembre",
+  "lumaUrl": "https://luma.com/emnhgsf3",
+  "whatsappUrl": "https://chat.whatsapp.com/HPy6hmmU0cU8hhdc7emMGH",
+  "communityWhatsappUrl": "https://chat.whatsapp.com/EjedY8Yysb8Bhuevn1zsKV",
+  "summary": "Taller presencial y gratuito para aprender a usar Grok Bot desde cero, como un compañero de trabajo más. No ocupás saber programar ni tener experiencia con IA. Vas a armar tu currículum y tu portafolio con IA, y ver cómo usar Grok Bot para buscar trabajo y adaptarte al mundo laboral de hoy. Evento sin fines de lucro. Registro desde las 12:00 m. d.; el taller arranca a la 1:00 p. m. Cupo limitado y registro con aprobación en Luma.",
+  "agenda": [
+    {
+      "time": "12:00 m. d.",
+      "title": "Registro y entrada",
+      "note": "Llegá temprano; el cupo es limitado."
+    },
+    {
+      "time": "1:00 p. m.",
+      "title": "Cuenta y créditos",
+      "note": "Revisamos tu cuenta de Grok Bot y, si aplica, canjeás créditos."
+    },
+    {
+      "time": "1:20 p. m.",
+      "title": "Demo en vivo",
+      "note": "Qué es un bot, cómo darle un trabajo, conectar herramientas, rutinas y archivos."
+    },
+    {
+      "time": "2:00 p. m.",
+      "title": "Hands-on",
+      "note": "Creás tu propio bot y lo usás para armar currículum y portafolio."
+    },
+    {
+      "time": "3:30 p. m.",
+      "title": "Pulir y exportar",
+      "note": "Dejá el resultado listo para compartir."
+    },
+    {
+      "time": "4:15 p. m.",
+      "title": "Cierre y networking",
+      "note": "Quien quiera muestra su resultado, café y espacio para conocer gente."
+    }
+  ],
+  "materials": [
+    {
+      "label": "Registro en Luma",
+      "url": "https://luma.com/emnhgsf3",
+      "kind": "link"
+    },
+    {
+      "label": "Crear cuenta de Grok Bot",
+      "url": "https://grok.com",
+      "kind": "link"
+    },
+    {
+      "label": "Página de Grok Bot",
+      "url": "https://x.ai/bot",
+      "kind": "link"
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Hay que pagar?",
+      "answer": "No. Es un taller presencial gratuito y sin fines de lucro."
+    },
+    {
+      "question": "¿Necesito saber programar?",
+      "answer": "No. Tampoco ocupás experiencia previa con IA."
+    },
+    {
+      "question": "¿Qué traigo?",
+      "answer": "Laptop (recomendado) o celular, cuenta personal de Grok Bot lista en grok.com, y si tenés currículums, estudios o certificaciones. Si no tenés nada, trabajamos con ejemplos."
+    },
+    {
+      "question": "¿El registro es directo?",
+      "answer": "No. En Luma pedís unirte y el host aprueba. Si no podés venir, cancelá para liberar el cupo."
+    },
+    {
+      "question": "¿Esto es un evento de la empresa?",
+      "answer": "No. Lo organizamos nosotros. Somos Build Ambassadors in the SpaceXSI Community. Evento independiente, con apoyo de American Spaces y el CCCN."
+    }
+  ],
+  "creditsEnabled": true,
+  "en": {
+    "title": "AI for your career: land a job and adapt to today’s workplace with Grok Bot",
+    "subtitle": "Grok Bot San José 101. Free in-person workshop",
+    "coverAlt": "Cover for the Grok Bot San José 101 workshop, Saturday November 28",
+    "summary": "A free in-person workshop to learn Grok Bot from scratch, like a teammate at work. No coding or prior AI experience needed. You’ll build your resume and portfolio with AI, and see how Grok Bot helps with job search and today’s workplace. Non-profit event. Check-in from 12:00 PM; workshop starts at 1:00 PM. Limited seats; Luma registration requires approval.",
+    "agenda": [
+      {
+        "time": "12:00 PM",
+        "title": "Check-in",
+        "note": "Arrive early; seats are limited."
+      },
+      {
+        "time": "1:00 PM",
+        "title": "Account and credits",
+        "note": "We review your Grok Bot account and claim credits if needed."
+      },
+      {
+        "time": "1:20 PM",
+        "title": "Live demo",
+        "note": "What a bot is, how to assign work, connect tools, routines, and files."
+      },
+      {
+        "time": "2:00 PM",
+        "title": "Hands-on",
+        "note": "Create your own bot and use it for your resume and portfolio."
+      },
+      {
+        "time": "3:30 PM",
+        "title": "Polish and export",
+        "note": "Get your result ready to share."
+      },
+      {
+        "time": "4:15 PM",
+        "title": "Wrap-up and networking",
+        "note": "Share your result if you want, coffee, and meet people."
+      }
+    ],
+    "materials": [
+      { "label": "Register on Luma" },
+      { "label": "Create a Grok Bot account" },
+      { "label": "Grok Bot page" }
+    ],
+    "faq": [
+      {
+        "question": "Is there a fee?",
+        "answer": "No. It’s a free in-person workshop and a non-profit event."
+      },
+      {
+        "question": "Do I need to know how to code?",
+        "answer": "No. You also don’t need prior AI experience."
+      },
+      {
+        "question": "What should I bring?",
+        "answer": "A laptop (recommended) or phone, a personal Grok Bot account ready at grok.com, and any resumes, studies, or certifications you have. If you don’t have anything, we’ll use examples."
+      },
+      {
+        "question": "Is registration automatic?",
+        "answer": "No. On Luma you request to join and the host approves. If you can’t make it, cancel so someone else can take the seat."
+      },
+      {
+        "question": "Is this a company event?",
+        "answer": "No. We organize it ourselves. We’re Build Ambassadors in the SpaceXSI Community. Independent event, with support from American Spaces and CCCN."
+      }
+    ]
+  }
+}

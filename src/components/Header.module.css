@@ -1,0 +1,48 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(18px);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4.5rem;
+  padding-block: 0.85rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.logo {
+  border-radius: 0.7rem;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brandText strong {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.brandText span {
+  color: var(--text-dim);
+  font-size: 0.78rem;
+}
+
+@media (max-width: 560px) {
+  .brandText span {
+    display: none;
+  }
+}

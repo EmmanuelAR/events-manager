@@ -1,0 +1,27 @@
+{
+  "slug": "sebastian-ceciliano-piedra",
+  "name": "Sebastián Ceciliano Piedra",
+  "role": "Build Ambassador in the SpaceXSI Community",
+  "location": "Costa Rica",
+  "photo": "/assets/imagenes/ambassadors/sebastian-ceciliano-piedra.png",
+  "bio": "Parte del equipo que arma los eventos de Grok Bot en San José. Apoya la organización, la comunidad y la experiencia del meetup.",
+  "socials": [
+    {
+      "label": "X",
+      "url": "https://x.com/Cbiux_04"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/cbiux/"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://instagram.com/jsebastian_04_"
+    }
+  ],
+  "en": {
+    "role": "Build Ambassador in the SpaceXSI Community",
+    "location": "Costa Rica",
+    "bio": "Part of the team behind Grok Bot events in San José. Helps with organizing, community, and the meetup experience."
+  }
+}

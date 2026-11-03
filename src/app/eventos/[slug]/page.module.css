@@ -1,0 +1,289 @@
+.page {
+  padding-bottom: 2.5rem;
+  background: #000;
+}
+
+.shell {
+  width: min(100% - 1.5rem, 72rem);
+  margin-inline: auto;
+}
+
+/* Mobile-first top */
+.top {
+  display: grid;
+  gap: 1.15rem;
+  padding-block: 1.25rem 0.85rem;
+}
+
+.coverCol {
+  display: flex;
+  justify-content: center;
+}
+
+.coverWrap {
+  width: min(100%, 16rem);
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #111;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.infoCol {
+  display: grid;
+  gap: 0.75rem;
+  min-width: 0;
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--text-dim);
+  font-weight: 500;
+  font-size: 0.88rem;
+}
+
+.title {
+  font-size: clamp(1.45rem, 5.5vw, 2.1rem);
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
+.facts {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  text-align: left;
+  margin-top: 0.25rem;
+}
+
+.facts li {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.factLabel {
+  color: var(--text-faint);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.module,
+.block {
+  width: 100%;
+  padding: 1.15rem 1.15rem;
+  border-radius: 1rem;
+  background: #151515;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.moduleBody {
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+}
+
+.registerTitle,
+.heading {
+  font-weight: 500;
+  font-size: 1.08rem;
+  letter-spacing: -0.02em;
+}
+
+.registerCopy,
+.sectionLead,
+.summary {
+  color: var(--text-dim);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.actions,
+.inlineActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.actions :global(a),
+.actions :global(button),
+.inlineActions :global(a),
+.inlineActions :global(button) {
+  width: 100%;
+}
+
+/* Mobile: single column stack */
+.body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  padding-top: 0.35rem;
+  align-items: start;
+}
+
+.spanFull {
+  grid-column: 1 / -1;
+}
+
+.agenda {
+  list-style: none;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.agendaItem {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.agendaTime {
+  color: var(--text-faint);
+  font-weight: 500;
+  font-size: 0.88rem;
+}
+
+.materials {
+  list-style: none;
+  display: grid;
+  gap: 0.1rem;
+}
+
+.materialLink {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.94rem;
+}
+
+.materialLink:last-child {
+  border-bottom: 0;
+}
+
+.materialLink:hover {
+  color: var(--text);
+}
+
+.materialKind {
+  color: var(--text-faint);
+  font-size: 0.8rem;
+}
+
+.faq {
+  display: grid;
+  gap: 0;
+}
+
+.faqItem {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-block: 0.7rem;
+}
+
+.faqItem:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.faqItem summary {
+  cursor: pointer;
+  font-weight: 500;
+  list-style: none;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.faqItem summary::after {
+  content: "+";
+  color: var(--text-faint);
+  font-weight: 400;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+
+.faqItem[open] summary::after {
+  content: "–";
+}
+
+.faqItem summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqItem p {
+  margin-top: 0.55rem;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  max-width: 36rem;
+}
+
+/* Tablet / desktop */
+@media (min-width: 720px) {
+  .shell {
+    width: min(100% - 2rem, 72rem);
+  }
+
+  .top {
+    grid-template-columns: minmax(12rem, 16rem) minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+    padding-block: 1.75rem 1rem;
+  }
+
+  .coverCol {
+    justify-content: flex-start;
+    position: sticky;
+    top: 5.25rem;
+  }
+
+  .coverWrap {
+    width: 100%;
+    max-width: none;
+  }
+
+  .infoCol {
+    text-align: left;
+  }
+
+  .facts li {
+    grid-template-columns: 3.75rem 1fr;
+    gap: 0.65rem;
+  }
+
+  .factLabel {
+    padding-top: 0.12rem;
+  }
+
+  .body {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+  }
+
+  .actions :global(a),
+  .actions :global(button),
+  .inlineActions :global(a),
+  .inlineActions :global(button) {
+    width: auto;
+  }
+
+  .agendaItem {
+    grid-template-columns: 5.5rem 1fr;
+    gap: 0.75rem;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "emmanuel-aguero-rojas",
+  "name": "Emmanuel Agüero Rojas",
+  "role": "Build Ambassador in the SpaceXSI Community",
+  "location": "Costa Rica",
+  "photo": "/assets/imagenes/ambassadors/emmanuel-aguero-rojas-v3.jpg",
+  "bio": "Organiza meetups de Grok Bot y Cursor en Costa Rica. Se enfoca en que la comunidad tenga agenda, materiales y recursos claros para cada evento.",
+  "socials": [
+    {
+      "label": "X",
+      "url": "https://x.com/EmmanuelDevCr"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/emmanuelaguerorojas/"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://instagram.com/ear.dev"
+    }
+  ],
+  "en": {
+    "role": "Build Ambassador in the SpaceXSI Community",
+    "location": "Costa Rica",
+    "bio": "Organizes Grok Bot and Cursor meetups in Costa Rica. Focused on clear agendas, materials, and resources for every event."
+  }
+}

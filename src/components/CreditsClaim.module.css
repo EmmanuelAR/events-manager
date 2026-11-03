@@ -1,0 +1,82 @@
+.section {
+  width: 100%;
+  padding: 1.15rem 1.2rem;
+  border-radius: 1rem;
+  background: #151515;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.heading {
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.form,
+.choices,
+.qrBlock {
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 0.92rem;
+}
+
+.input {
+  width: 100%;
+  min-height: 2.6rem;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.75rem;
+  background: #0a0a0a;
+  color: var(--text);
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.error {
+  color: var(--accent-pink);
+  font-size: 0.9rem;
+}
+
+.choiceRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.qrLabel {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.qr {
+  width: min(100%, 180px);
+  height: auto;
+  background: var(--surface-soft);
+  padding: 0.65rem;
+  border-radius: 0.85rem;
+}
+
+@media (max-width: 719px) {
+  .choiceRow :global(a),
+  .choiceRow :global(button),
+  .form :global(button) {
+    width: 100%;
+  }
+}
