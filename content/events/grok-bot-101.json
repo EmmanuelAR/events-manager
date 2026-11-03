@@ -86,7 +86,7 @@
     },
     {
       "question": "¿Esto es un evento de la empresa?",
-      "answer": "No. Lo organizamos nosotros. Somos Build Ambassadors in the SpaceXSI Community. Evento independiente, con apoyo de American Spaces y el CCCN."
+      "answer": "No. Lo organizamos nosotros. Somos Build ambassadors in the SpaceXSI Community. Evento independiente, con apoyo de American Spaces y el CCCN."
     }
   ],
   "creditsEnabled": true,
@@ -151,7 +151,7 @@
       },
       {
         "question": "Is this a company event?",
-        "answer": "No. We organize it ourselves. We’re Build Ambassadors in the SpaceXSI Community. Independent event, with support from American Spaces and CCCN."
+        "answer": "No. We organize it ourselves. We’re Build ambassadors in the SpaceXSI Community. Independent event, with support from American Spaces and CCCN."
       }
     ]
   }

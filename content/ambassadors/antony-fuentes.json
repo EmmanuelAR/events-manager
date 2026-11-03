@@ -1,7 +1,7 @@
 {
   "slug": "antony-fuentes",
   "name": "Antony Fuentes",
-  "role": "Build Ambassador in the SpaceXSI Community",
+  "role": "Build ambassador in the SpaceXSI Community",
   "location": "Costa Rica",
   "photo": "/assets/imagenes/ambassadors/antony-fuentes-v3.jpg",
   "bio": "Colabora en los eventos de la comunidad en Costa Rica. Enfocado en que la gente se conecte, aprenda y se lleve algo útil del meetup.",
@@ -20,7 +20,7 @@
     }
   ],
   "en": {
-    "role": "Build Ambassador in the SpaceXSI Community",
+    "role": "Build ambassador in the SpaceXSI Community",
     "location": "Costa Rica",
     "bio": "Helps run community events in Costa Rica. Focused on helping people connect, learn, and leave with something useful."
   }
