@@ -11,8 +11,7 @@ export const dictionaries = {
     heroHeadline: "Eventos en Costa Rica",
     heroLead: "Agenda, materiales y créditos de cada meetup.",
     heroCredit:
-      "Organizado por Build Ambassadors, part of the SpaceXSI Community.",
-    heroSubtitle: "Part of the SpaceXSI Community",
+      "Organizado por Build Ambassadors in the SpaceXSI Community.",
     upcomingEvent: "Próximo evento",
     pastEvent: "Evento pasado",
     date: "Fecha",
@@ -112,8 +111,7 @@ export const dictionaries = {
     heroHeadline: "Events in Costa Rica",
     heroLead: "Agenda, materials, and credits for every meetup.",
     heroCredit:
-      "Organized by Build Ambassadors, part of the SpaceXSI Community.",
-    heroSubtitle: "Part of the SpaceXSI Community",
+      "Organized by Build Ambassadors in the SpaceXSI Community.",
     upcomingEvent: "Upcoming event",
     pastEvent: "Past event",
     date: "Date",
