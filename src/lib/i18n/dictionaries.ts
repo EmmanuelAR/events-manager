@@ -99,6 +99,7 @@ export const dictionaries = {
     whoCanAttend: "Quién puede asistir",
     whatToBring: "Qué necesitas traer",
     privacyPhotos: "Privacidad",
+    acknowledgment: "Importante",
     summary: "Descripción",
   },
   en: {
@@ -199,6 +200,7 @@ export const dictionaries = {
     whoCanAttend: "Who can attend",
     whatToBring: "What to bring",
     privacyPhotos: "Privacy",
+    acknowledgment: "Acknowledgments",
     summary: "About",
   },
 } as const;
