@@ -1,7 +1,7 @@
 export type EventStatus = "upcoming" | "past";
 
 export type AgendaItem = {
-  time: string;
+  time?: string;
   title: string;
   note?: string;
 };
@@ -48,6 +48,8 @@ export type CommunityEvent = {
   whatToBring?: string[];
   /** Nota de privacidad */
   privacy?: string;
+  /** Agradecimientos (sección Importante) */
+  acknowledgment?: string;
   agenda: AgendaItem[];
   materials: MaterialItem[];
   faq?: FaqItem[];

@@ -146,12 +146,16 @@ export function EventDetailView({ event }: Props) {
           <h2 className={styles.heading}>{t.agenda}</h2>
           <div className={styles.moduleBody}>
             <ol className={styles.agenda}>
-              {localized.agenda.map((item) => (
+              {localized.agenda.map((item, index) => (
                 <li
-                  key={`${item.time}-${item.title}`}
+                  key={`${item.time ?? index}-${item.title}`}
                   className={styles.agendaItem}
                 >
-                  <span className={styles.agendaTime}>{item.time}</span>
+                  {item.time ? (
+                    <span className={styles.agendaTime}>{item.time}</span>
+                  ) : (
+                    <span className={styles.agendaTime} aria-hidden="true"></span>
+                  )}
                   <div>
                     <strong>{item.title}</strong>
                     {item.note ? <p className={styles.noteMuted}>{item.note}</p> : null}
@@ -233,6 +237,15 @@ export function EventDetailView({ event }: Props) {
             <h2 className={styles.heading}>{t.privacyPhotos}</h2>
             <div className={styles.moduleBody}>
               <p className={styles.sectionText}>{localized.privacy}</p>
+            </div>
+          </section>
+        ) : null}
+
+        {localized.acknowledgment ? (
+          <section className={styles.block} id="importante">
+            <h2 className={styles.heading}>{t.acknowledgment}</h2>
+            <div className={styles.moduleBody}>
+              <p className={styles.sectionText}>{localized.acknowledgment}</p>
             </div>
           </section>
         ) : null}

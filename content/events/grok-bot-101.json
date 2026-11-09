@@ -1,7 +1,7 @@
 {
   "slug": "grok-bot-101",
-  "title": "IA para tu carrera: conseguí trabajo y adaptate al mundo laboral con Grok Bot",
-  "subtitle": "Grok Bot San José 101. Taller presencial y gratuito",
+  "title": "Grok Bot Meetup San José",
+  "subtitle": "Taller presencial y gratuito",
   "status": "upcoming",
   "startsAt": "2026-12-05T13:00:00-06:00",
   "endsAt": "2026-12-05T17:00:00-06:00",
@@ -12,12 +12,12 @@
     "mapsUrl": "https://maps.google.com/?q=Centro+Cultural+Costarricense+Norteamericano+Dent"
   },
   "cover": "/assets/imagenes/events/grok-bot-101-cover-dec5.png",
-  "coverAlt": "Portada del Grok Bot San José Meetup, sábado 5 de diciembre",
+  "coverAlt": "Portada del Grok Bot Meetup San José, sábado 5 de diciembre",
   "lumaUrl": "https://luma.com/emnhgsf3",
   "lumaEventId": "emnhgsf3",
   "whatsappUrl": "https://chat.whatsapp.com/HPy6hmmU0cU8hhdc7emMGH",
   "communityWhatsappUrl": "https://chat.whatsapp.com/EjedY8Yysb8Bhuevn1zsKV",
-  "summary": "Taller presencial y gratuito para aprender a usar Grok Bot desde cero, como un compañero de trabajo más. No ocupás saber programar ni tener experiencia con IA. Vas a armar tu currículum y tu portafolio con IA, y ver cómo usar Grok Bot para buscar trabajo y adaptarte al mundo laboral de hoy. Evento sin fines de lucro. Registro desde las 12:00 m. d.; el taller arranca a la 1:00 p. m. Cupo limitado y registro con aprobación en Luma.",
+  "summary": "Taller presencial y gratuito para aprender a usar Grok Bot desde cero, como un compañero de trabajo más. No ocupás saber programar ni tener experiencia con IA. Vas a construir tu currículum y tu portafolio desde cero con IA, y a ver cómo usar Grok Bot para buscar trabajo y adaptarte al mundo laboral de hoy. Evento sin fines de lucro. Registro y entrada desde las 12:00 m. d. Inicio del taller: 1:00 p. m. Cupo limitado y registro con aprobación en Luma.",
   "whoCanAttend": "El evento es abierto al público y a estudiantes. Es útil si buscás trabajo, estás empezando tu carrera o querés ver la IA en un caso real. El cupo es limitado y el registro requiere aprobación. Si no podés venir, cancelá tu registro en un clic para que le toque a otra persona.",
   "whatToBring": [
     "Tu laptop (recomendado). Si no tenés, podés usar tu celular.",
@@ -25,7 +25,8 @@
     "Te recomendamos crear tu cuenta, o unificarla si ya tenés una cuenta gratuita anterior, antes del evento. Así aprovechás mejor el tiempo del taller.",
     "Información previa para trabajar: currículums anteriores, estudios y certificaciones. Si no tenés nada, trabajaremos con contenido de ejemplo."
   ],
-  "privacy": "Los datos de tu registro se usan solo para darte acceso al evento por Luma y no se guardan después. Nunca te pediremos cédula, dirección, contraseñas ni datos bancarios. El grupo de WhatsApp es voluntario. Quienes se unan podrán ver los números de teléfono de los demás participantes del grupo.",
+  "privacy": "Los datos de tu registro se usan solo para darte acceso al evento por Luma y no se guardan después. Nunca te pediremos cédula, dirección, contraseñas ni datos bancarios. El grupo de WhatsApp es voluntario. Quienes se unan podrán ver los números de teléfono de los demás participantes del grupo. Consultas: emmanuelaguerorojas@gmail.com",
+  "acknowledgment": "Agradecimiento especial a American Spaces y al Centro Cultural Costarricense-Norteamericano (CCCN) por su apoyo para hacer posible este taller y por abrir sus puertas a la comunidad joven de Costa Rica.",
   "agenda": [
     {
       "time": "12:00 m. d.",
@@ -35,25 +36,21 @@
     {
       "time": "1:00 p. m.",
       "title": "Cuenta y créditos",
-      "note": "Revisamos tu cuenta de Grok Bot y, si aplica, canjeás créditos."
+      "note": "Revisamos tu cuenta de Grok Bot y, si corresponde, canjeás créditos."
     },
     {
-      "time": "1:20 p. m.",
       "title": "Demo en vivo",
       "note": "Qué es un bot, cómo darle un trabajo, conectar herramientas, rutinas y archivos."
     },
     {
-      "time": "2:00 p. m.",
-      "title": "Hands-on",
-      "note": "Creás tu propio bot y lo usás para armar currículum y portafolio."
+      "title": "Práctica con ayuda",
+      "note": "Creás tu propio bot y lo usás para armar tu currículum y tu portafolio."
     },
     {
-      "time": "3:30 p. m.",
       "title": "Pulir y exportar",
       "note": "Dejá el resultado listo para compartir."
     },
     {
-      "time": "4:15 p. m.",
       "title": "Cierre y networking",
       "note": "Quien quiera muestra su resultado, café y espacio para conocer gente."
     }
@@ -99,10 +96,10 @@
   ],
   "creditsEnabled": true,
   "en": {
-    "title": "AI for your career: land a job and adapt to today's workplace with Grok Bot",
-    "subtitle": "Grok Bot San José 101. Free in-person workshop",
-    "coverAlt": "Cover for the Grok Bot San José Meetup, Saturday December 5",
-    "summary": "A free in-person workshop to learn Grok Bot from scratch, like a teammate at work. No coding or prior AI experience needed. You'll build your resume and portfolio with AI, and see how Grok Bot helps with job search and today's workplace. Non-profit event. Check-in from 12:00 PM; workshop starts at 1:00 PM. Limited seats; Luma registration requires approval.",
+    "title": "Grok Bot Meetup San José",
+    "subtitle": "Free in-person workshop",
+    "coverAlt": "Cover for the Grok Bot Meetup San José, Saturday December 5",
+    "summary": "A free in-person workshop to learn Grok Bot from scratch, like a teammate at work. No coding or prior AI experience needed. You'll build your resume and portfolio from scratch with AI, and see how Grok Bot helps with job search and adapting to today's workplace. Non-profit event. Check-in from 12:00 PM; workshop starts at 1:00 PM. Limited seats; Luma registration requires approval.",
     "whoCanAttend": "The event is open to the public and students. It's helpful if you're job hunting, starting your career, or want to see AI in a real use case. Limited seats; registration requires approval. If you can't make it, cancel your registration so someone else can take the spot.",
     "whatToBring": [
       "Your laptop (recommended). If you don't have one, you can use your phone.",
@@ -110,7 +107,8 @@
       "We recommend creating or consolidating your account before the event to make the most of the workshop time.",
       "Background info to work with: past resumes, studies, or certifications. If you don't have any, we'll use example content."
     ],
-    "privacy": "Your registration data is only used to grant access to the event through Luma and is not stored afterward. We will never ask for ID, address, passwords, or banking information. The WhatsApp group is optional. Those who join will be able to see the phone numbers of other group participants.",
+    "privacy": "Your registration data is only used to grant access to the event through Luma and is not stored afterward. We will never ask for ID, address, passwords, or banking information. The WhatsApp group is optional. Those who join will be able to see the phone numbers of other group participants. Questions: emmanuelaguerorojas@gmail.com",
+    "acknowledgment": "Special thanks to American Spaces and Centro Cultural Costarricense-Norteamericano (CCCN) for their support in making this workshop possible and for opening their doors to Costa Rica's young community.",
     "agenda": [
       {
         "time": "12:00 PM",
@@ -123,22 +121,18 @@
         "note": "We review your Grok Bot account and claim credits if needed."
       },
       {
-        "time": "1:20 PM",
         "title": "Live demo",
         "note": "What a bot is, how to assign work, connect tools, routines, and files."
       },
       {
-        "time": "2:00 PM",
-        "title": "Hands-on",
+        "title": "Hands-on practice",
         "note": "Create your own bot and use it for your resume and portfolio."
       },
       {
-        "time": "3:30 PM",
         "title": "Polish and export",
         "note": "Get your result ready to share."
       },
       {
-        "time": "4:15 PM",
         "title": "Wrap-up and networking",
         "note": "Share your result if you want, coffee, and meet people."
       }
